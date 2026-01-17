@@ -34,7 +34,7 @@ void sendSMS() {
   if (WiFi.status() == WL_CONNECTED) {
     WiFiClient client; // Initialize WiFi client
     
-    String apiUrl = "/send_sms?ID=" + String(templateID);
+    String apiUrl = "/api/v1/send_sms?ID=" + String(templateID);
 
     Serial.print("Connecting to server...");
     if (client.connect("www.circuitdigest.cloud", 80)) { // Connect to the server
